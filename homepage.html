@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+<!-- <link rel="stylesheet" href="index.css"> -->
+<!-- <link rel="stylesheet" href="/css/imoji.css"> -->
+<link
+    href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Josefin+Sans|Josefin+Slab|Rokkitt|Saira|Ubuntu+Mono&display=swap"
+    rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="icon" type="image/png" href="images/icons/favicon.ico"/> -->
+<!-- <link href="css/bootstrap.css" rel="stylesheet" /> -->
+<link href="https://fonts.googleapis.com/css?family=Oswald|Patua+One&display=swap" rel="stylesheet">
+<link href="css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAeal8UwojfOEIlLqmFBUUXUF2NEYApd38",
+        authDomain: "chipchat-app-a46f3.firebaseapp.com",
+        databaseURL: "https://chipchat-app-a46f3.firebaseio.com",
+        projectId: "chipchat-app-a46f3",
+        storageBucket: "",
+        messagingSenderId: "72340674959",
+        appId: "1:72340674959:web:d2e802c8634f9281"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+</script>
+<style>
+    #iconlist {
+        width: 90% !important;
+        text-align: center !important;
+    }
+
+    .icon {
+        /* margin-top: 20px; */
+        margin-left: 35%;
+        float: left !important;
+        list-style-type: none;
+        height: 50px;
+        width: 50px;
+    }
+
+    #logo {
+        margin-left: 5%;
+
+    }
+
+    #icon {
+        color: rgb(234, 144, 65);
+        font-family: 'Russo One', sans-serif;
+    }
+
+    #mySidebar {
+        width: 25% !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #logo {
+            margin-left: 10%;
+        }
+
+        #icon {
+            margin-right: 40px;
+        }
+
+        .icon {
+            margin-left: 35%;
+
+        }
+
+        #mySidebar {
+            width: 100% !important;
+            margin-top: -90px;
+            z-index: 2;
+        }
+    }
+
+    .header {
+        background-color: #343A40 !important;
+    }
+
+    #guestimg {
+        height: 100px;
+        width: 100px;
+    }
+
+    #dataDiv {
+        max-width: 100%;
+        float: left;
+        margin-left: 5%;
+        padding: 0px 0px 0px 10px !important;
+    }
+
+    #imgDiv {
+        float: left;
+    }
+
+    #name {
+        font-family: 'Patua One', cursive;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    #img {
+        width: 30%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        #img {
+            width: 70%;
+        }
+    }
+
+    .dashboard {
+        /* text-align: ; */
+        font-family: 'Patua One', cursive;
+        font-family: 'Oswald', sans-serif;
+        padding-left: 30px;
+    }
+
+    .dashboard span {
+        width: 80px !important;
+        display: inline-block;
+    }
+
+    #left-panel {
+        position: fixed;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        overflow: hidden;
+        float: left;
+    }
+
+    #asideDiv {
+        /* height: 110%; */
+        display: none;
+        border: 4px solid;
+        float: left;
+    }
+
+    /* #container{} */
+
+    #nav {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 110%;
+        padding-right: 15px;
+        background-color: rgb(228, 181, 141);
+        float: left;
+        padding-bottom: 270px;
+    }
+
+    #messagearea1,
+    #messagearea2 {
+        width: 90%;
+        margin-top: 590px;
+        position: fixed;
+        z-index: 1;
+        font-size: 120%;
+        color: #5a5854;
+        background-color: #f2f2f2;
+        border: 1px solid #bdbdbd;
+        border-radius: 5px;
+        padding: 5px 5px 15px 30px;
+        background-repeat: no-repeat;
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    #messagearea3 {
+        /* width: 90%; */
+        margin-top: 590px;
+        position: fixed;
+        /* z-index: 1; */
+        font-size: 120%;
+        color: #5a5854;
+        background-color: #f2f2f2;
+        border: 1px solid #bdbdbd;
+        border-radius: 5px;
+        padding: 5px 5px 15px 30px;
+        background-repeat: no-repeat;
+        display: block;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    #messagelist {
+        border: 1px solid !important;
+    }
+
+    .sentButton {
+        margin-left: 89% !important;
+        background-image: url("img/sent.png");
+        background-position: right;
+    }
+
+    #messagearea2 {
+        margin-left: 15px;
+    }
+
+    #messagearea2:hover {
+        background-color: rgb(149, 160, 182);
+    }
+
+    #close {
+        margin-right: 10%;
+        position: fixed;
+        margin-left: 95%;
+    }
+
+    #close:hover {
+        background-color: bisque;
+    }
+
+    #messagebox {
+        border: 1px solid gray;
+        border-radius: 20px;
+        background-color: cadetblue;
+        padding: 10px;
+        width: 30%;
+        margin-left: 60%;
+        /* float: left; */
+
+    }
+
+    #messagebox p {
+        font-family: 'Ubuntu Mono', monospace;
+        font-family: 'Josefin Slab', serif;
+        font-family: 'Saira', sans-serif;
+        font-family: 'Alegreya Sans', sans-serif;
+        font-family: 'Rokkitt', serif;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    #mainbox {}
+
+    #reply {
+        border: 1px solid gray;
+        border-radius: 20px;
+        background-color: burlywood;
+        padding: 10px;
+        width: 30%;
+        margin-left: 5%;
+    }
+
+    @media only screen and (max-width: 1100px) {
+
+        #messagearea1,
+        #messagearea2,
+        #messagearea3 {
+            margin-top: 507px;
+        }
+
+        #reply {
+            width: 60%;
+        }
+
+        #close {
+            margin-left: 85%;
+        }
+
+        .sentButton {
+            margin-left: 86% !important;
+        }
+
+        #messagebox {
+            width: 60%;
+            margin-left: 34%;
+        }
+    }
+
+    #showmessage {
+        border: 1px solid;
+        float: left;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    #imgojiTable {
+        border: 1px solid;
+        background-color: cadetblue;
+    }
+
+    #imgojiTable td {
+        padding: 3px;
+        cursor: pointer;
+    }
+
+    #imgojiTable td:hover {
+        background-color: beige;
+        border-radius: 5px;
+    }
+
+    #alertbox {
+        /* height: 500px; */
+        width: 300px;
+        border: 1px solid rgb(167, 164, 164);
+        background-color: rgb(224, 233, 229);
+        position: relative;
+        margin: auto;
+        margin-top: -2px;
+        position: fixed;
+        margin-left: 40%;
+        display: none;
+    }
+
+    #image {
+        height: 20px;
+        width: 20px;
+        float: left;
+    }
+    #count{
+        position: fixed;
+        background-color:rgb(185, 53, 53);
+        display: inline-block;
+        width: 30px;
+        padding: 5px;
+        text-align: center;
+        color: white;
+        border-radius: 50%;
+    }
+
+    @media only screen and (max-width: 500px) {
+        #alertbox {
+            height: 500px;
+            margin-left: 0;
+            margin-top: -2px;
+            width: 100%;
+        }
+    }
+</style>
+
+<body>
+
+    <nav class="w3-sidebar w3-bar-block w3-card" id="mySidebar">
+        <div class="w3-container w3-theme-d2 header">
+            <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+            <br>
+            <div class="w3-padding w3-center">
+                <li class="icon">
+                    <a href="#">
+                        <i class="pe-7s-user" style="font-size:70px; margin-top: -24px"></i>
+                    </a>
+                </li>
+            </div>
+        </div>
+        <label for=""></label>
+        <p id="name" class="dashboard"></p>
+        <p id="age" class="dashboard"></p>
+        <p id="gender" class="dashboard"></p>
+        <p id="email" class="dashboard"></p>
+        <p id="country" class="dashboard"></p>
+        <p class="dashboard" style="text-align: center;padding-right:30px;margin-top:40px"><button
+                id="logout">Logout</button></p>
+    </nav>
+    <header class="w3-top w3-bar w3-theme header">
+        <button class="w3-bar-item w3-button w3-xxxlarge w3-hover-theme" onclick="openSidebar()">&#9776;</button>
+        <!-- <h1 class="w3-bar-item" id="iconlist"> -->
+        <!-- <ul id="iconlist">    -->
+        <p style="text-align: center">
+            <li class="icon" id="logo">
+                <a class="navbar-brand" href="#" style="border: 1px">
+                    <img src="./img/logo.png" alt=""> <label for="" id="icon">CHIP CHAT</label>
+                </a>
+            </li>
+            <li class="icon"><a href="#" id="messages"><i class="pe-7s-mail" style="font-size:44px"></i> <span id="count">0</span> </a></li>
+            </div>
+
+        </p>
+    </header>
+    <div id="alertbox"></div>
+
+    <div class="w3-container" style="margin-top:90px" id="container">
+    </div>
+    <div id="asideDiv">
+        <aside id="left-panel">
+            <div class="login-info">
+                <span> My info</span></div>
+            <nav id="nav">
+                <br><br><br>
+                <img src="img/close.png" alt="" id="close">
+                <!-- <div id="showmessage"> -->
+            </nav>
+        </aside>
+        <br>
+        <input type="text" placeholder="type here " id="messagearea1">
+        <input type="button" placeholder="type here " id="messagearea2" style="width: 50px;" class="sentButton">
+
+
+    </div>
+    <button id="messagearea3" class="sentButton">Emoji</button>
+
+
+    <script>
+        closeSidebar();
+        function openSidebar() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+
+
+        document.getElementById(`logout`).addEventListener(`click`, () => {
+
+            alert("working")
+            firebase.auth().signOut().then(function () {
+                localStorage.removeItem(`activeUser`)
+                window.location.href = "index.html"
+            },
+                function (error) {
+                })
+        })
+
+    </script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <script src="js/ct-navbar.js"></script>
+    <script src="js/homepage.js"></script>
+    <script src="js/loginsignup.js"></script>
+    <script src="js/chatpage.js"></script>
+
+
+</body>

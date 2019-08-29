@@ -1,0 +1,85 @@
+h1{
+    text-align: center;
+}
+
+/* .navbar-nav{
+    float:  left !important;
+} */
+
+#navbarResponsive{
+text-align: left !important;
+}
+
+#ul{
+    width: 100%;
+}
+
+
+
+@media screen and (min-width: 991px) {
+    #contact{
+        border: 1px solid;
+        margin-left: 80%;
+    }
+  }
+
+  #icon{
+      color: rgb(234, 144, 65);
+      font-family: 'Russo One', sans-serif;
+  }
+  #title{
+    color: rgb(234, 144, 65) !important;
+    font-family: 'Russo One', sans-serif !important;
+  }
+
+  #icon2{
+    color: rgb(234, 144, 65);
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px;
+  }
+
+  #heading{
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+  }
+
+  #dropDown{
+      /* padding: 20px;
+      height: 60px !important;
+      border: none; */
+  }
+
+  #dropDiv{
+       border: 1px solid red;
+      padding: 10px;
+      height: 45px;
+      /* height: 50px; */
+  border-radius: 25px;
+  /* padding: 0 30px; */
+
+  }
+
+  #country{
+    /* min-height: 150px; */
+    border-radius: 25px;
+    padding: 15px 30px;
+    border: none;
+    margin-bottom: 10px;
+  }
+
+  #gender{
+    /* border-radius: 25px; */
+    padding: 10px 20px;
+    font-weight: bold;
+    color: grey;
+    /* border: 1px solid; */
+  }
+  .radio{
+      padding-right: 30px;
+  }
+
+  #login{
+    font-family: 'EB Garamond', serif;
+    font-weight: bolder;
+    color: #E67E22;
+  }
